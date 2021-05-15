@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.PrivacyPolicyFrag">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/recPrivacy"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:id="@+id/rl_main"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:id="@+id/txQues"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/black"
+                    android:text="1. Why do I need a Privacy Policy?"/>
+
+
+                <TextView
+                    android:layout_toRightOf="@+id/txt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+
+                    android:visibility="gone"
+                    android:fontFamily="@font/poppinsregular"
+                    android:id="@+id/txt_ques"
+                    android:textColor="@color/black"
+                    android:text="-"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/txt_2"
+                    android:layout_below="@+id/txQues"
+                    android:text="You need a Privacy Policy because privacy laws around the world require one if you collect personal information. Many third-party companies also require a Privacy Policy in order to use their services."/>
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/txt_2"
+                    android:fontFamily="@font/poppinsregular"
+                    android:id="@+id/txt_ans"
+                    android:layout_below="@+id/txt_ques"
+                    android:textColor="@color/black"
+                    android:text="-"/>
+
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/rl_main"
+                android:src="@drawable/dotted"
+                android:layerType="software" />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:id="@+id/rlMain"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:id="@+id/txQues1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/black"
+                    android:text="2. Do I need a Privacy Policy even if I don't collect personal information?"/>
+
+
+                <TextView
+                    android:layout_toRightOf="@+id/txt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:text="-"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/txtAns1"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/grey"
+                    android:layout_below="@+id/txQues1"
+                    android:text="You should have a Privacy Policy even if you don't collect personal information because the general public and authorities both expect to see one."/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/rl_main"
+                android:src="@drawable/dotted"
+                android:layerType="software" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

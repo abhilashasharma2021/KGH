@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_About"
+        android:enabled="true"
+        android:icon="@drawable/about"
+        android:title="@string/about"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_tc"
+        android:enabled="true"
+        android:title="T&amp;C"
+        android:icon="@drawable/tc"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:enabled="true"
+        android:title=""
+        android:id="@+id/action_Home"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_contact"
+        android:enabled="true"
+        android:icon="@drawable/contact"
+        android:title="Conatct"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_help"
+        android:enabled="true"
+        android:title="Help"
+        android:icon="@drawable/help"
+        app:showAsAction="ifRoom"/>
+</menu>

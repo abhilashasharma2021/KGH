@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">KghApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Enter Password</string>
+    <string name="re_enter_password">Re enter Password</string>
+    <string name="forgot_password">Forgot password ?</string>
+    <string name="full_name">Full Name</string>
+    <string name="about">About</string>
+    <string name="qualification">Qualification :</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="home">Home</string>
+</resources>

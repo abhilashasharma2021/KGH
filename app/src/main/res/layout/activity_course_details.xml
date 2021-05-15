@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CourseDetailsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/rl_main"
+            android:background="@color/darkBlue">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/back_arrow"
+                android:padding="10dp"
+                android:visibility="visible"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:src="@drawable/centre"
+                android:layout_centerInParent="true"/>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:background="@color/purple_200"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/first_image"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:background="@color/purple_200">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="APPSC - General studies for all competitive exams"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/white"/>
+                    <Button
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/light_green_rounded"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:inputType="textCapCharacters"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Telugu Medium"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="30dp"
+                        android:id="@+id/ll_dur1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/duration"
+                            android:padding="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duration"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsbold"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="1 year"
+                        android:textSize="12dp"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/ll_dur1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/grey"/>
+
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="30dp"
+                        android:id="@+id/ll_dur2"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:src="@drawable/price"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsbold"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="1245544545"
+                        android:textSize="12dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/ll_dur2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/grey"/>
+
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightgrey"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course Details"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/ll_dur2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorenm"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/ll_dur2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ll_purchase1"
+                    android:background="@drawable/yellow_rounded"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Purchase courses"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/ll_dur2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/white"/>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:src="@drawable/next"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/lightgrey"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Demo videos"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/ll_dur2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <com.github.florent37.shapeofview.shapes.RoundRectView
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"   >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:src="@drawable/first_image"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="INDIAN HISTORY BY RAFI SIR"
+                                    android:gravity="center_horizontal"
+                                    android:textSize="12dp"
+
+                                    android:fontFamily="@font/poppinsbold"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/black"/>
+                            </LinearLayout>
+
+
+
+                        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                        <com.github.florent37.shapeofview.shapes.RoundRectView
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"   >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:src="@drawable/first_image"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="INDIAN HISTORY BY RAFI SIR"
+                                    android:gravity="center_horizontal"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/poppinsbold"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/black"/>
+                            </LinearLayout>
+
+
+
+                        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teacher Profile"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/ll_dur2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"/>
+
+
+                <com.github.florent37.shapeofview.shapes.RoundRectView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"   >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:orientation="horizontal">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="100dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/techer_dummy"
+                                android:layout_height="100dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TAlbat Aricon"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/poppinsbold"
+                                    android:layout_marginTop="20dp"
+                                    android:gravity="center_horizontal"
+                                    android:layout_below="@+id/ll_dur2"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/black"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:text="Geography"
+                                    android:textSize="12dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/sky_blue_rounded"
+                                    android:gravity="center_horizontal"
+                                    android:layout_below="@+id/ll_dur2"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/teal_700"/>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="dummy"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/poppinsregular"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center_horizontal"
+                                    android:layout_below="@+id/ll_dur2"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/grey"/>
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:padding="5dp"
+                                android:id="@+id/iv_gra"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/graduate"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Graduation"
+                                android:textSize="12dp"
+                                android:id="@+id/txt_grad"
+                                android:fontFamily="@font/poppinsbold"
+                                android:gravity="center_horizontal"
+                                android:layout_toRightOf="@+id/iv_gra"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/black"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="end"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="5dp"
+                                    android:elevation="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/fb"/>
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="5dp"
+                                    android:layout_marginRight="10dp"
+                                    android:elevation="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/twitter"/>
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="5dp"
+                                    android:elevation="10dp"
+                                    android:id="@+id/iv_google"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/google"/>
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+</layout>

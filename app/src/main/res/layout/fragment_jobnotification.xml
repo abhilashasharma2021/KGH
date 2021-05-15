@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.JobnotificationFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:elevation="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ll_main"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Economy class-52(Plannings)>economy \nclass-52(Plannings)"
+                            android:textStyle="bold"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsbold"
+                            android:layout_marginTop="30dp"
+                            android:gravity="start"
+                            android:layout_below="@+id/ll_dur2"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="start"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="20dp"
+                            android:text="Class Notification"
+                            android:textSize="12dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/sky_blue_rounded"
+                            android:gravity="center_horizontal"
+                            android:layout_below="@+id/ll_dur2"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/teal_800"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="80dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/lightgrey"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:padding="5dp"
+                                        android:src="@drawable/duration"
+                                        android:layout_height="35dp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:text="Notification Date :"/>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="22dp"
+                                    android:gravity="start"
+                                    android:textColor="@color/grey"
+                                    android:text="20 sep 2020"/>
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/lightgrey"/>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:padding="5dp"
+                                        android:src="@drawable/duration"
+                                        android:layout_height="40dp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:text="Notification Time :"/>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_marginLeft="22dp"
+                                    android:textStyle="bold"
+                                    android:gravity="start"
+                                    android:textColor="@color/grey"
+                                    android:text="10:00pm"/>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:elevation="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ll_main1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AP HISTORY-CLASS-9"
+                            android:textStyle="bold"
+                            android:textSize="12dp"
+                            android:layout_marginTop="30dp"
+                            android:gravity="start"
+                            android:fontFamily="@font/poppinsbold"
+                            android:layout_below="@+id/ll_dur2"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="start"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="20dp"
+                            android:text="Class Notification"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/sky_blue_rounded"
+                            android:gravity="center_horizontal"
+                            android:layout_below="@+id/ll_dur2"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/teal_800"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="80dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightgrey"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:padding="5dp"
+                                        android:src="@drawable/duration"
+                                        android:layout_height="35dp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:text="Notification Date"/>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="22dp"
+                                    android:gravity="start"
+                                    android:textColor="@color/grey"
+                                    android:text="20 sep 2020"/>
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/lightgrey"/>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_weight="1">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:padding="5dp"
+                                        android:src="@drawable/duration"
+                                        android:layout_height="40dp"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12dp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold"
+                                        android:text="Notification Time"/>
+
+
+
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_marginLeft="22dp"
+                                    android:textStyle="bold"
+                                    android:gravity="start"
+                                    android:textColor="@color/grey"
+                                    android:text="10:00pm"/>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

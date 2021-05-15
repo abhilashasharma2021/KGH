@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ProfileFrag">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/rl_main"
+        android:background="@color/darkBlue">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/ivback"
+            android:src="@drawable/back_arrow"
+            android:padding="10dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"/>
+
+
+
+    </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12sp"
+            android:layout_margin="10dp"
+            android:layout_height="200dp"
+            android:elevation="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="100dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp"
+                        android:src="@drawable/techer_dummy"
+                        android:layout_height="100dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/ivStudent"
+                                android:layout_marginTop="40dp"
+                                android:src="@drawable/usernew"
+                                android:layout_centerVertical="true"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Student Name"
+                                android:textSize="14dp"
+                                android:layout_toRightOf="@+id/ivStudent"
+                                android:layout_marginTop="20dp"
+                                android:gravity="start"
+                                android:id="@+id/tx"
+                                android:fontFamily="@font/poppinsbold"
+                                android:layout_below="@+id/ll_dur2"
+                                android:layout_marginLeft="5dp"
+                                android:layout_gravity="start"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_toRightOf="@+id/ivStudent"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/tx"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="start"
+                                android:textColor="@color/grey"
+                                android:text="Ramesh Kumar Agarwal"/>
+
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLogin"
+                            android:layout_width="120dp"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Change"
+                            android:textAllCaps="false"
+                            android:backgroundTint="@color/black"
+                            android:fontFamily="@font/poppinseemibold"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                     <RelativeLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/rlMAin"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:id="@+id/iv1"
+                                android:src="@drawable/pronew"
+                                android:layout_centerVertical="true"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Student Id"
+                                android:textSize="14dp"
+                                android:layout_toRightOf="@+id/iv1"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:id="@+id/txId"
+                                android:fontFamily="@font/poppinsbold"
+                                android:layout_marginLeft="5dp"
+                                android:layout_gravity="start"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_toRightOf="@+id/iv1"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/txId"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="start"
+                                android:textColor="@color/grey"
+                                android:text="ST0123456789"/>
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_toRightOf="@+id/rlMAin"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:id="@+id/iv2"
+                                android:src="@drawable/pronew"
+                                android:layout_centerVertical="true"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gender"
+                                android:textSize="14dp"
+                                android:layout_toRightOf="@+id/iv2"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:id="@+id/txGender"
+                                android:fontFamily="@font/poppinsbold"
+                                android:layout_marginLeft="5dp"
+                                android:layout_gravity="start"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_toRightOf="@+id/iv2"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/txGender"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="start"
+                                android:textColor="@color/grey"
+                                android:text="Male"/>
+
+
+                        </RelativeLayout>
+                     </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+                </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/ivEmail"
+                    android:padding="2dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/emailnew"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Id"
+                    android:textSize="14dp"
+                    android:layout_toRightOf="@+id/ivEmail"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:id="@+id/txEmail1"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_below="@+id/ll_dur2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="start"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/txEmail1"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="start"
+                    android:textColor="@color/grey"
+                    android:text="kumarrameesh123@gmail.com"/>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/ivMobile"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/mobilenew"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile number"
+                    android:textSize="14dp"
+                    android:layout_toRightOf="@+id/ivMobile"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:id="@+id/txMobile1"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_below="@+id/ll_dur2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="start"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txMobile1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="start"
+                    android:text="91-0123456789"
+                    android:textColor="@color/grey"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/ivEduction"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/pronew"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Eduction"
+                    android:textSize="14dp"
+                    android:layout_toRightOf="@+id/ivEduction"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:id="@+id/txEduction1"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_below="@+id/ll_dur2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="start"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/txEduction1"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="start"
+                    android:textColor="@color/grey"
+                    android:text="Bachelor of Arts"/>
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnprofile"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Edit Profile"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinseemibold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppinseemibold"
+            android:layout_below="@+id/txtforgotPass"
+            android:text=""
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purchase History"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"/>
+
+             <androidx.recyclerview.widget.RecyclerView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/rvHistory"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>
