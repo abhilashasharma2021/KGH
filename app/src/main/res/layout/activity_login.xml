@@ -270,7 +270,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:text="LOGIN"
+                android:text="@string/login"
+                android:textAllCaps="false"
                 android:fontFamily="@font/poppinseemibold"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
@@ -287,10 +288,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:textColor="@color/black"
-                    android:text=""
+                    android:text="@string/forgot_pass"
                     android:fontFamily="@font/poppinseemibold"
-                    android:textSize="14sp" />
+                    android:textSize="13sp" />
 
                 <TextView
                     android:id="@+id/txtNew"
@@ -300,8 +300,8 @@
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/poppinseemibold"
                     android:layout_below="@+id/txtforgotPass"
-                    android:text=""
-                    android:textSize="14sp" />
+                    android:text="@string/new_user"
+                    android:textSize="13sp" />
 
 
             </RelativeLayout>

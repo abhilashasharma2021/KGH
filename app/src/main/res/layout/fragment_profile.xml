@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="My Profile"
+            android:text="@string/my_profile"
             android:textSize="18sp"
             android:fontFamily="@font/poppinsbold"
             android:layout_centerInParent="true"
@@ -37,6 +37,40 @@
             android:textColor="@color/white"/>
 
 
+        <RelativeLayout
+            android:layout_width="110dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/rlLogout"
+            android:background="@drawable/whiterounded"
+            android:layout_height="35dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/iv"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/logout"
+                android:layout_centerVertical="true"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/txLogout"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/iv"
+                android:fontFamily="@font/poppinseemibold"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:text="@string/logout"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
@@ -98,7 +132,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Student Name"
+                                android:text="@string/student_name"
                                 android:textSize="14dp"
                                 android:layout_toRightOf="@+id/ivStudent"
                                 android:layout_marginTop="20dp"
@@ -123,20 +157,26 @@
 
 
                         </RelativeLayout>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChange"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/change"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/poppinseemibold"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnLogin"
-                            android:layout_width="120dp"
-                            android:layout_height="42dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Change"
-                            android:textAllCaps="false"
-                            android:backgroundTint="@color/black"
-                            android:fontFamily="@font/poppinseemibold"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp"
-                            android:textColor="@color/white"
-                            android:textSize="12sp" />
+
+
+</RelativeLayout>
 
                      <RelativeLayout
                          android:layout_width="wrap_content"
@@ -155,7 +195,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Student Id"
+                                android:text="@string/student_id"
                                 android:textSize="14dp"
                                 android:layout_toRightOf="@+id/iv1"
                                 android:layout_marginTop="10dp"
@@ -195,7 +235,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Gender"
+                                android:text="@string/gender"
                                 android:textSize="14dp"
                                 android:layout_toRightOf="@+id/iv2"
                                 android:layout_marginTop="10dp"
@@ -257,7 +297,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email Id"
+                    android:text="@string/email_id"
                     android:textSize="14dp"
                     android:layout_toRightOf="@+id/ivEmail"
                     android:layout_marginTop="20dp"
@@ -297,7 +337,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile number"
+                    android:text="@string/mobile_number"
                     android:textSize="14dp"
                     android:layout_toRightOf="@+id/ivMobile"
                     android:layout_marginTop="20dp"
@@ -337,7 +377,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Student Eduction"
+                    android:text="@string/student_eduction"
                     android:textSize="14dp"
                     android:layout_toRightOf="@+id/ivEduction"
                     android:layout_marginTop="20dp"
@@ -372,7 +412,7 @@
             android:layout_gravity="center"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:text="Edit Profile"
+            android:text="@string/edit_profile"
             android:textAllCaps="false"
             android:fontFamily="@font/poppinseemibold"
             android:layout_marginLeft="15dp"
@@ -395,7 +435,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Purchase History"
+            android:text="@string/purchase_history"
             android:textSize="14dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppinsbold"

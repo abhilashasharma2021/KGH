@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AllCourseShowActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/rl_main"
+                android:background="@color/darkBlue">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/back_arrow"
+                android:padding="10dp"
+                android:id="@+id/ivBack"
+                android:visibility="visible"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/course_lists"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"/>
+
+
+            </RelativeLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/rl_1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rl_main"
+                android:layout_margin="10dp"
+                android:translationZ="15dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:padding="3dp"
+                        android:src="@drawable/search"
+                        app:tint="@color/grey" />
+
+                    <EditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/iv_search"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:hint="@string/search_here"
+                        android:maxLength="150"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHomeStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_1"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -33,19 +33,19 @@
                 android:gravity="center"
                 android:textSize="16sp"
                 android:fontFamily="@font/poppinsextrabold"
-                android:text="Register"/>
+                android:text="@string/register"/>
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/grey"
-                android:gravity="center"
-                android:textSize="14sp"
                 android:fontFamily="@font/poppinseemibold"
-                android:text="Fill the below fields and register yourself \n with us to continue"/>
-
+                android:gravity="center"
+                android:text="@string/fill_the_below_fields_and_register_yourself_n_with_us_to_continue"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardFull"
@@ -407,7 +407,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnSignup"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
@@ -429,10 +429,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:textColor="@color/black"
-                    android:text=""
+                    android:text="@string/already_ac"
                     android:fontFamily="@font/poppinsbold"
-                    android:textSize="14sp" />
+                    android:textSize="13sp" />
 
 
 

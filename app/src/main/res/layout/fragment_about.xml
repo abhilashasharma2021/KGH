@@ -79,7 +79,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppinsbold"
-                    android:text="About KGH Academy"
+                    android:text="@string/about_kgh_academy"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -102,7 +102,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppinsbold"
-                    android:text="Director's Message"
+                    android:text="@string/director_s_message"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 

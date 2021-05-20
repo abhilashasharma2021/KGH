@@ -4,6 +4,10 @@ public class HomeCourseListModel {
     private String courseName;
     private String courseDuration;
     private String coursePrice;
+    private String courseMedium;
+    private  String courseImage;
+    private  String coursePath;
+    private  String courseId;
 
     public String getCourseName() {
         return courseName;
@@ -37,22 +41,27 @@ public class HomeCourseListModel {
         this.courseMedium = courseMedium;
     }
 
-    public int getCourseImage() {
+    public String getCourseImage() {
         return courseImage;
     }
 
-    public void setCourseImage(int courseImage) {
+    public void setCourseImage(String courseImage) {
         this.courseImage = courseImage;
     }
 
-    public HomeCourseListModel(String courseName, String courseDuration, String coursePrice, String courseMedium, int courseImage) {
-        this.courseName = courseName;
-        this.courseDuration = courseDuration;
-        this.coursePrice = coursePrice;
-        this.courseMedium = courseMedium;
-        this.courseImage = courseImage;
+    public String getCoursePath() {
+        return coursePath;
     }
 
-    private String courseMedium;
-    private  int courseImage;
+    public void setCoursePath(String coursePath) {
+        this.coursePath = coursePath;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
 }

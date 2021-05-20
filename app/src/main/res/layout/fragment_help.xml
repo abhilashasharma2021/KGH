@@ -35,7 +35,7 @@
                     android:layout_centerVertical="true"
                     android:fontFamily="@font/poppinsbold"
                     android:layout_centerInParent="true"
-                    android:text="Help To Support"
+                    android:text="@string/help_to_support"
                     android:textColor="@color/white"
                     android:textSize="16dp" />
 
@@ -186,7 +186,7 @@
                 android:layout_gravity="center"
                 android:backgroundTint="@color/darkBlue"
                 android:elevation="6dp"
-                android:text="Submit"
+                android:text="@string/submit"
                 app:cornerRadius="8dp"
                 android:textAllCaps="false"
                 android:textColor="@color/white"

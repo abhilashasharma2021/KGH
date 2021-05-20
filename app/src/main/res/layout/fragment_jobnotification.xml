@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.JobnotificationFragment">
 
     <ScrollView
@@ -15,10 +16,12 @@
 
 
 
-            <com.github.florent37.shapeofview.shapes.RoundRectView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:elevation="15dp">
+                 app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:layout_margin="10dp"
+                android:layout_height="200dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -49,7 +52,7 @@
                         <TextView
                             android:layout_width="150dp"
                             android:layout_height="20dp"
-                            android:text="Class Notification"
+                            android:text="@string/class_notification"
                             android:textSize="12dp"
                             android:layout_marginTop="5dp"
                             android:background="@drawable/sky_blue_rounded"
@@ -103,7 +106,7 @@
                                         android:textSize="12dp"
                                         android:textColor="@color/black"
                                         android:textStyle="bold"
-                                        android:text="Notification Date :"/>
+                                        android:text="@string/notification_date"/>
 
                                 </LinearLayout>
 
@@ -146,7 +149,7 @@
                                         android:textSize="12dp"
                                         android:textColor="@color/black"
                                         android:textStyle="bold"
-                                        android:text="Notification Time :"/>
+                                        android:text="@string/notification_time"/>
 
                                 </LinearLayout>
 
@@ -169,13 +172,15 @@
 
                 </RelativeLayout>
 
-            </com.github.florent37.shapeofview.shapes.RoundRectView>
+            </com.google.android.material.card.MaterialCardView>
 
 
-            <com.github.florent37.shapeofview.shapes.RoundRectView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:elevation="15dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:layout_margin="10dp"
+                android:layout_height="200dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -329,7 +334,7 @@
 
                 </RelativeLayout>
 
-            </com.github.florent37.shapeofview.shapes.RoundRectView>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

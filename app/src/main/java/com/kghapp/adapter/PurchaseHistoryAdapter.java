@@ -37,7 +37,7 @@ public class PurchaseHistoryAdapter extends RecyclerView.Adapter<PurchaseHistory
         holder.rowpurchaselayoutBinding.txCourseName.setText(modelObject.getCourseName());
         holder.rowpurchaselayoutBinding.txDuration.setText(modelObject.getCourseDuration());
         holder.rowpurchaselayoutBinding.txPrice.setText(modelObject.getCoursePrice());
-        holder.rowpurchaselayoutBinding.ivCourse.setImageResource(modelObject.getCourseImage());
+      /*  holder.rowpurchaselayoutBinding.ivCourse.setImageResource(modelObject.getCourseImage());*/
     }
 
     @Override

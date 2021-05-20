@@ -89,7 +89,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppinsbold"
-                                android:text="Duration"
+                                android:text="@string/duration"
                                 android:textColor="@color/black"
                                 android:textSize="11sp"
                                 android:textStyle="bold" />
@@ -137,7 +137,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Price"
+                                android:text="@string/price"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />

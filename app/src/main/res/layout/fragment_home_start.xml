@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="20dp"
-                    android:text="Login"
+                    android:text="@string/lo_gin"
                     android:textColor="@color/white" />
 
                 <ImageView
@@ -87,7 +87,7 @@
                     android:layout_toRightOf="@+id/iv_search"
                     android:background="@null"
                     android:fontFamily="@font/poppinsregular"
-                    android:hint="Search here"
+                    android:hint="@string/search_here"
                     android:maxLength="150"
                     android:singleLine="true"
                     android:textSize="14sp" />
@@ -113,7 +113,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/poppinsextrabold"
                 android:gravity="center"
-                android:text="Course List"
+                android:text="@string/course_list"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -132,7 +132,7 @@
                 </androidx.recyclerview.widget.RecyclerView>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLogin"
+                    android:id="@+id/btnAll"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_below="@+id/rvHomeStart"
@@ -140,7 +140,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="15dp"
                     android:fontFamily="@font/poppinseemibold"
-                    android:text="View all Courses"
+                    android:text="@string/view_all_courses"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="16sp" />

@@ -20,7 +20,7 @@ import com.kghapp.fragment.HomeFragment;
 import com.kghapp.fragment.HomeStartFrag;
 import com.kghapp.fragment.NotificationFrag;
 import com.kghapp.fragment.ProfileFrag;
-import com.kghapp.others.Appconstant;
+
 import com.kghapp.others.SharedHelper;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {

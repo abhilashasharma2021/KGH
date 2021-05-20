@@ -8,7 +8,6 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.kghapp.R;
-import com.kghapp.others.Appconstant;
 import com.kghapp.others.SharedHelper;
 
 public class SplashActivity extends AppCompatActivity {
