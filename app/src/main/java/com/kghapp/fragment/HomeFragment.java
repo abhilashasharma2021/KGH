@@ -1,6 +1,7 @@
 package com.kghapp.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.kghapp.R;
+import com.kghapp.activity.PurchasedCourseDetailsActivity;
 import com.kghapp.databinding.FragmentHomeBinding;
 import com.kghapp.databinding.FragmentHomeStartBinding;
 
@@ -27,14 +29,13 @@ public class HomeFragment extends Fragment {
         view=binding.getRoot();
         context=getActivity();
 
-       /* ll_purchase1=view.findViewById(R.id.ll_purchase1);
-        ll_purchase1.setOnClickListener(new View.OnClickListener() {
+
+        binding.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ClassesCourseActiv())
-                        .commit();
+              startActivity(new Intent(getActivity(), PurchasedCourseDetailsActivity.class));
             }
-        });*/
+        });
 
         return view;
     }

@@ -232,7 +232,7 @@
                 <LinearLayout
                     android:layout_width="200dp"
                     android:layout_height="40dp"
-                    android:id="@+id/ll_purchase1"
+                    android:id="@+id/llPurchaseNow"
                     android:background="@drawable/yellow_rounded"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center_horizontal"
@@ -279,8 +279,15 @@
                     android:layout_gravity="center_vertical"
                     android:textColor="@color/black"/>
 
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rvVideo"/>
+
                 <HorizontalScrollView
                     android:layout_width="match_parent"
+                    android:visibility="gone"
                     android:layout_height="200dp">
 
                     <LinearLayout
@@ -368,12 +375,17 @@
                     android:layout_gravity="center_vertical"
                     android:textColor="@color/black"/>
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/rvProfile"
+                    android:layout_height="wrap_content"/>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_margin="10dp"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="8dp"
+                    android:visibility="gone"
                     android:layout_height="235dp"   >
                     <LinearLayout
                         android:layout_width="match_parent"

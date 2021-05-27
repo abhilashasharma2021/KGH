@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.QuesExamFrag">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_main"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/darkBlue">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/back_arrow"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/exam"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/card"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tx1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_dur2"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="Started at Time"
+                                android:textColor="@color/white"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/txTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_dur2"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toRightOf="@+id/tx1"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="9.00 Pm"
+                                android:textColor="@color/white"
+                                android:textSize="12dp" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tx2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_dur2"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="You are attempting"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/txAttempt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_dur2"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toRightOf="@+id/tx2"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="2"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/txSys"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_dur2"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toRightOf="@+id/txAttempt"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="/"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/txTotalQue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_dur2"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toRightOf="@+id/txSys"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="2"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_dur2"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toRightOf="@+id/txTotalQue"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="@string/questions"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/txComplete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/poppinseemibold"
+                                android:text="-"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/rlnew"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/circle_white"
+                                android:visibility="visible">
+
+
+                                <TextView
+                                    android:id="@+id/txTimer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/poppinseemibold"
+                                    android:text="2.00"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/txMarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/poppinseemibold"
+                                android:gravity="center_horizontal"
+                                android:text="100 Marks"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvQue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlNew"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/circle_black">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppinseemibold"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txQues"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/rlNew"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="start"
+                    android:text="The teacher ask if _______ to being our test book to class."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/txQues"
+                    android:layout_height="wrap_content">
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="2dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/circle_allgrey">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppinseemibold"
+                            android:text="A"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txAns"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@+id/rl1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="start"
+                        android:text="all we had remember."
+                        android:textColor="@color/grey"
+                        android:textSize="13sp" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="2dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl2"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/circle_allgrey">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/poppinseemibold"
+                                    android:text="B"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/txAnsB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_toRightOf="@+id/rl2"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="all we had remember."
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="2dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl3"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/circle_allgrey">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/poppinseemibold"
+                                    android:text="C"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/txAnsC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_toRightOf="@+id/rl3"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="all we had remember."
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="2dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl4"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/circle_allgrey">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/poppinseemibold"
+                                    android:text="D"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/txAnsD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_toRightOf="@+id/rl4"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="start"
+                                android:text="all we had remember."
+                                android:textColor="@color/grey"
+                                android:textSize="13sp" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentBottom="true">
+
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPrevious"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="8dp"
+                android:backgroundTint="@color/darkBlue"
+                android:fontFamily="@font/poppinseemibold"
+                android:text="@string/previous"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/darkBlue"
+                android:fontFamily="@font/poppinseemibold"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/poppinseemibold"
+            android:gravity="center"
+            android:text="@string/submit_amp_exam"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSubmit">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClear"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/poppinseemibold"
+                android:text="@string/clear_answer"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRestart"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/poppinseemibold"
+                android:text="Restart"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPause"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppinseemibold"
+                android:text="@string/pause"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

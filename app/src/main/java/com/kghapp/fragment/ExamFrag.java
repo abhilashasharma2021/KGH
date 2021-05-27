@@ -29,19 +29,17 @@ public class ExamFrag extends Fragment {
         binding= FragmentExamBinding.inflate(getLayoutInflater(),container,false);
         view=binding.getRoot();
         context=getActivity();
-        return view;
 
-       /* binding=FragmentExamBinding.inflate(getLayoutInflater());
-        view=binding.getRoot();
-        getActivity().setContentView(view);*/
-      /*  txt_exam=view.findViewById(R.id.txt_exam);
-       txt_exam.setOnClickListener(new View.OnClickListener() {
+        binding.btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ConfirmFrag())
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QuesExamFrag())
                         .commit();
             }
-        });*/
+        });
+        return view;
+
+
 
 
 

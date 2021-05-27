@@ -62,7 +62,7 @@ public class HomeStartFrag extends Fragment {
         binding.btnAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), AllCourseShowActivity.class));
+               startActivity(new Intent(getActivity(), AllCourseShowActivity.class));
             }
         });
 
@@ -81,6 +81,8 @@ public class HomeStartFrag extends Fragment {
             dialog.showDialog(R.layout.progress_layout, getActivity());
             AndroidNetworking.post(Api.BASE_URL)
                     .addBodyParameter("control",CourseList)
+                    .addBodyParameter("limit","10")
+                    .addBodyParameter("page","2")
                     .setPriority(Priority.HIGH)
                     .build()
                     .getAsJSONObject(new JSONObjectRequestListener() {

@@ -11,9 +11,9 @@ import com.kghapp.fragment.CourseMaterialFrag;
 import com.kghapp.fragment.CourseVideoFrag;
 import com.kghapp.fragment.JobnotificationFragment;
 
-public class PurchasedCourseAdapter extends FragmentStatePagerAdapter {
+public class PurchasedTabCourseAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
-    public PurchasedCourseAdapter(FragmentManager fm, int NoofTabs){
+    public PurchasedTabCourseAdapter(FragmentManager fm, int NoofTabs){
         super(fm);
         this.mNumOfTabs = NoofTabs;
     }

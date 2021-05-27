@@ -21,6 +21,8 @@ import com.kghapp.fragment.HomeStartFrag;
 import com.kghapp.fragment.NotificationFrag;
 import com.kghapp.fragment.ProfileFrag;
 
+import com.kghapp.fragment.QuesExamFrag;
+import com.kghapp.others.AppConstats;
 import com.kghapp.others.SharedHelper;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -65,8 +67,11 @@ ActivityHomeBinding binding;
 
         switch (item.getItemId()){
             case R.id.action_exam:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ExamFrag())
+               getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ExamFrag())
                         .commit();
+             /*   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QuesExamFrag())
+                        .commit();*/
+
 
                 break;
 

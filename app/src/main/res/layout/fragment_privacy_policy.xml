@@ -37,6 +37,7 @@
                     android:textSize="15sp"
                     android:fontFamily="@font/poppinsbold"
                     android:id="@+id/txQues"
+                    android:visibility="gone"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:textColor="@color/black"
@@ -64,7 +65,7 @@
                     android:textColor="@color/grey"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:id="@+id/txt_2"
+                    android:id="@+id/txtPrivacy"
                     android:layout_below="@+id/txQues"
                     android:text="You need a Privacy Policy because privacy laws around the world require one if you collect personal information. Many third-party companies also require a Privacy Policy in order to use their services."/>
 
@@ -76,6 +77,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:visibility="gone"
                     android:layout_toRightOf="@+id/txt_2"
                     android:fontFamily="@font/poppinsregular"
                     android:id="@+id/txt_ans"
@@ -101,6 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginTop="15dp"
                 android:id="@+id/rlMain"
+                android:visibility="gone"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content">
@@ -142,13 +145,7 @@
 
             </RelativeLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_margin="5dp"
-                android:layout_below="@+id/rl_main"
-                android:src="@drawable/dotted"
-                android:layerType="software" />
+
         </LinearLayout>
 
     </ScrollView>

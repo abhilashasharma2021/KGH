@@ -39,7 +39,6 @@
     <string name="negative_marks">Negative Marks</string>
     <string name="total_time">Total Time</string>
     <string name="minutes">Minutes</string>
-    <string name="questions">Questions</string>
     <string name="marks">Marks</string>
     <string name="go_to_home">Go to home</string>
     <string name="we_have_a_submitted_the_exam_result_will_be_available_on_date">We have a submitted the exam,result will be available on date</string>
@@ -70,5 +69,17 @@
     <string name="date_purchased">Date Purchased</string>
     <string name="course_progress">Course Progress</string>
     <string name="logout">Logout</string>
+    <string name="next">Next</string>
+    <string name="purchase_now">Purchase Now</string>
+    <string name="exam">Exam</string>
+    <string name="submit_amp_exam"><![CDATA[Submit & Exam]]></string>
+    <string name="clear_answer">Clear answer</string>
+    <string name="questions">Questions</string>
+    <string name="previous">Previous</string>
+    <string name="pause">Pause Timer</string>
+    <string name="pdf_material">PDF Material</string>
+    <string name="uploaded">Uploaded :</string>
+    <string name="share">Share</string>
+    <string name="download">Download</string>
 
 </resources>

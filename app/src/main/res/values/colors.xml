@@ -10,9 +10,11 @@
     <color name="teal_700_trans">#A65FDCDB</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="darkBlue">#0D113E</color>
+    <color name="darkBlue">#0d113e</color>
     <color name="White">#FFFFFF</color>
     <color name="lightgrey">#BED3CBCB</color>
     <color name="grey">#BE575454</color>
     <color name="Black">#000000</color>
+    <color name="viewgrey">#dbdbdb</color>
+    <color name="card">#1c9296</color>
 </resources>

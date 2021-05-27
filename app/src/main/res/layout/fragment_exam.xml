@@ -426,7 +426,7 @@
             android:text="Dummy description"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnStart"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="30dp"

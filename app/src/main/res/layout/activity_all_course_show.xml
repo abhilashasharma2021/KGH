@@ -8,7 +8,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_above="@+id/rl"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,4 +95,73 @@
         </LinearLayout>
     </ScrollView>
 
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:gravity="center"
+            android:id="@+id/rlPrevious"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/yellow_rounded"
+            android:layout_height="35dp">
+
+            <ImageView
+                android:id="@+id/iv_pre"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/previous"
+                />
+            <TextView
+                android:id="@+id/txt_pre"
+                android:layout_toRightOf="@+id/iv_pre"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinseemibold"
+                android:text="Previous"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:gravity="center"
+            android:id="@+id/rlNext"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/yellow_rounded"
+            android:layout_height="35dp">
+
+            <ImageView
+                android:id="@+id/ivNext"
+                android:layout_toRightOf="@+id/txt_next"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/nextnew"
+                app:tint="@color/white" />
+            <TextView
+                android:id="@+id/txt_next"
+
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinseemibold"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
 </RelativeLayout>

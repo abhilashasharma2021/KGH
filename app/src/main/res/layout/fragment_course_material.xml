@@ -1,14 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.CourseMaterialFrag">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:layout_margin="10dp"
+        android:layout_height="200dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
-</FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_main"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Here will be Course Material  "
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_marginTop="30dp"
+                    android:gravity="start"
+                    android:id="@+id/txtCount"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="start"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:text="@string/pdf_material"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/sky_blue_rounded"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/txtCount"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/teal_800"/>
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:padding="5dp"
+                        android:src="@drawable/pdf"
+                        android:layout_height="70dp"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="80dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#dbdbdb"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:padding="5dp"
+                                android:src="@drawable/duration"
+                                android:layout_height="40dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/uploaded"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="22dp"
+                            android:gravity="start"
+                            android:textColor="@color/grey"
+                            android:text="3 days ago"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="150dp"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/download"
+                            app:cornerRadius="8dp"
+                            android:fontFamily="@font/poppinseemibold"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:backgroundTint="@color/darkBlue"
+                            android:layout_height="50dp"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</RelativeLayout>

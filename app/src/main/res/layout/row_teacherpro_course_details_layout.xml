@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:layout_height="235dp"   >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:id="@+id/ivProfile"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/techer_dummy"
+                    android:layout_height="100dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TAlbat Aricon"
+                        android:textSize="12dp"
+                        android:id="@+id/txTName"
+                        android:fontFamily="@font/poppinsbold"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/ll_dur2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="Geography"
+                        android:textSize="12dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/sky_blue_rounded"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/ll_dur2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/teal_800"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dummy"
+                        android:textSize="12dp"
+                        android:id="@+id/txExper"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/ll_dur2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/grey"/>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:id="@+id/iv_gra"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/graduate"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/graduation"
+                    android:textSize="12dp"
+                    android:id="@+id/txt_grad1"
+                    android:fontFamily="@font/poppinsbold"
+                    android:gravity="center_horizontal"
+                    android:layout_toRightOf="@+id/iv_gra"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="M.com, M.phil, M.A Economics"
+                    android:textSize="12dp"
+                    android:layout_below="@+id/txt_grad1"
+                    android:id="@+id/txtgrad"
+                    android:fontFamily="@font/poppinsbold"
+                    android:gravity="center_horizontal"
+                    android:layout_toRightOf="@+id/iv_gra"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/grey"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:layout_below="@+id/txtgrad"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="5dp"
+                        android:elevation="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/fb"/>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="5dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/twitter"/>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="5dp"
+                        android:elevation="10dp"
+                        android:id="@+id/iv_google"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/google"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

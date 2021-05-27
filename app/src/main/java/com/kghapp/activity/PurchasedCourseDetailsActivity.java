@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 import com.kghapp.R;
+import com.kghapp.adapter.PurchasedTabCourseAdapter;
 import com.kghapp.adapter.TabsNotificationAdapter;
 import com.kghapp.databinding.ActivityAllCourseShowBinding;
 import com.kghapp.databinding.ActivityPurchasedCourseDetailsBinding;
@@ -20,8 +21,8 @@ ActivityPurchasedCourseDetailsBinding binding;
 
         binding.tablayout.addTab(binding.tablayout.newTab().setText("Course Videos "));
         binding.tablayout.addTab(binding.tablayout.newTab().setText("Course Materials"));
-        TabsNotificationAdapter tabsNotificationAdapter = new TabsNotificationAdapter(this.getSupportFragmentManager(), binding.tablayout.getTabCount());
-        binding.viewPager.setAdapter(tabsNotificationAdapter);
+        PurchasedTabCourseAdapter tabCourseAdapter = new PurchasedTabCourseAdapter(this.getSupportFragmentManager(), binding.tablayout.getTabCount());
+        binding.viewPager.setAdapter(tabCourseAdapter);
         binding.viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(binding.tablayout));
         binding.tablayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

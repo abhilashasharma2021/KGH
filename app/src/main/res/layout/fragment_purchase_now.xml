@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.PurchaseNowFrag">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/rl_main"
+                android:background="@color/darkBlue">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/back_arrow"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Purchase course"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"/>
+
+
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/logo" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="A P P S C- Group II"
+                        android:textSize="12dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/poppinsbold"
+                        android:layout_below="@+id/ll_dur2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="start"
+                        android:textColor="@color/black"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="20dp"
+                            android:text="Telugu Medium"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/sky_blue_rounded"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/teal_800"/>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12sp"
+                            android:layout_margin="15dp"
+                            android:layout_height="150dp"
+                            android:elevation="15dp">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_height="wrap_content">
+                                <RadioGroup
+                                    android:id="@+id/radioGroup"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton1"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Online Classes "
+                                        android:fontFamily="@font/poppinseemibold"
+                                        android:textSize="16sp"/>
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton2"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Offline Classes"
+                                        android:fontFamily="@font/poppinseemibold"
+                                        android:textSize="16sp"/>
+
+                                </RadioGroup>
+
+                            </RelativeLayout>
+
+
+
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="30dp"
+                app:cornerRadius="8dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:text="@string/purchase_now"
+                android:textColor="@color/white"/>
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/fb"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+</layout>
+
+

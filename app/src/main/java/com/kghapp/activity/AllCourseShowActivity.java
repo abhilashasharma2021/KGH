@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -32,6 +33,7 @@ ActivityAllCourseShowBinding binding;
 
     private HomeCourseListAdapter adapter;
     private ArrayList<HomeCourseListModel> courseList=new ArrayList<>();
+    int count=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,15 +45,17 @@ ActivityAllCourseShowBinding binding;
         binding.rvHomeStart.setLayoutManager(mLayoutManager);
 
 
-        getData();
+        getData(count+"");
 
     }
-    private void getData() {
-
+    private void getData(String s) {
+        Log.e("fhchgchgv",s);
         CustomDialog dialog = new CustomDialog();
         dialog.showDialog(R.layout.progress_layout, AllCourseShowActivity.this);
         AndroidNetworking.post(Api.BASE_URL)
                 .addBodyParameter("control",CourseList)
+                .addBodyParameter("limit","10")
+                .addBodyParameter("page",s)
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -63,6 +67,9 @@ ActivityAllCourseShowBinding binding;
                         try {
                             if (response.getString("result").equals("true")){
                               String image_path=response.getString("image_path");
+                              String curent_page=response.getString("curent_page");
+                              String total_page=response.getString("total_page");
+                              int Totalpage= Integer.parseInt(total_page);
                               String data=response.getString("data");
                                 JSONArray jsonArray=new JSONArray(data);
                                 for (int i = 0; i <jsonArray.length() ; i++) {
@@ -79,6 +86,34 @@ ActivityAllCourseShowBinding binding;
                                 }
                                 adapter = new HomeCourseListAdapter(AllCourseShowActivity.this, courseList);
                                 binding.rvHomeStart.setAdapter(adapter);
+
+                                binding.rlNext.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        count++;
+
+                                        if (count<Totalpage){
+                                            getData(count+"");
+
+                                        }else {
+
+                                        }
+                                    }
+                                });
+
+
+                                binding.rlPrevious.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        count--;
+                                        if (count<Totalpage){
+                                            getData(count+"");
+
+                                        }else {
+
+                                        }
+                                    }
+                                });
                             }
                         }
 

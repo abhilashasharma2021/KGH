@@ -29,7 +29,7 @@ import static com.kghapp.others.Api.signup;
 
 public class LoginActivity extends AppCompatActivity {
 ActivityLoginBinding binding;
-String stEmail="",stPassword="",stRepassword="";
+String stEmail="",stPassword="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,14 +63,12 @@ String stEmail="",stPassword="",stRepassword="";
 
                 stEmail=binding.etEmail.getText().toString().trim();
                 stPassword=binding.etPassword.getText().toString().trim();
-                stRepassword=binding.etRePass.getText().toString().trim();
+
 
                 if (stEmail.isEmpty()){
                     binding.etEmail.setError("Registered Email Address Must Required");
                 }else if (stPassword.isEmpty()){
                     binding.etPassword.setError("Password Must Required");
-                }else if (!stRepassword.equals(stPassword)){
-                    binding.etRePass.setError("Password not matched Inter correct password");
                 }
                 else {
                     login();

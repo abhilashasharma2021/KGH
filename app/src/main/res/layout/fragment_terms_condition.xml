@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.TermsConditionFrag">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,11 +15,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Terms &amp; Conditions Heading 1"
+        android:text="Terms &amp; Conditions "
         android:textSize="14sp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
         android:gravity="start"
+        android:visibility="gone"
         android:fontFamily="@font/poppinsextrabold"
         android:layout_gravity="start"
         android:textColor="@color/black"/>
@@ -26,14 +29,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document "
-            android:textSize="13sp"
+            android:layout_gravity="start"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:gravity="start"
+            android:id="@+id/txTerm"
             android:fontFamily="@font/poppinsregular"
-            android:layout_gravity="start"
-            android:textColor="@color/grey"/>
+            android:gravity="start"
+            android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document "
+            android:textColor="@color/grey"
+            android:textSize="13sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,6 +47,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:gravity="start"
+            android:visibility="gone"
             android:fontFamily="@font/poppinsextrabold"
             android:layout_gravity="start"
             android:textColor="@color/black"/>
@@ -55,10 +61,12 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:gravity="start"
+            android:visibility="gone"
             android:layout_gravity="start"
             android:textSize="13sp"
             android:fontFamily="@font/poppinsregular"
             android:textColor="@color/grey"/>
 
     </LinearLayout>
+</ScrollView>
 </RelativeLayout>
