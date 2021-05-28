@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.SelectExamFrag">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/darkBlue">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/back_arrow"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="@string/online_exam"
+            android:fontFamily="@font/poppinseemibold"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/select_the_exam_type"
+            android:gravity="center"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="50dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:text="@string/select_course"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+
+
+                        <RelativeLayout
+                            android:layout_width="200dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/grey_round"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="25dp">
+
+                            <Spinner
+                                android:layout_width="wrap_content"
+                                android:layout_alignParentRight="true"
+                                style="@style/Spinner"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/black" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"/>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/select_subject"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="200dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/grey_round"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="25dp">
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentRight="true"
+                            style="@style/Spinner"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/select_topic"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="200dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/grey_round"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="25dp">
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentRight="true"
+                            style="@style/Spinner"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dbdbdb"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/select_exam"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="200dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/grey_round"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="25dp">
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentRight="true"
+                            style="@style/Spinner"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="25dp"
+            android:fontFamily="@font/poppinseemibold"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

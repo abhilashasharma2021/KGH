@@ -64,9 +64,11 @@ public class TecherProCourseDetailsAdapter extends RecyclerView.Adapter<TecherPr
             holder.rowTeacherproCourseDetailsLayoutBinding.txExper.setText(plainText);
 
 
+            Log.e("tgjfrngf", "onBindViewHolder: " +modelObject.getPath() + modelObject.getImage());
+
             try {
                 Glide.with(mContext).load(modelObject.getPath() + modelObject.getImage())
-                        .placeholder(R.drawable.dummy).override(250, 250)
+                        .placeholder(R.drawable.techer_dummy).override(250, 250)
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(holder.rowTeacherproCourseDetailsLayoutBinding.ivProfile);
             } catch (Exception e) {

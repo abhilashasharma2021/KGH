@@ -122,6 +122,8 @@ public class CourseDetailsActivity extends AppCompatActivity {
                                     VideoCourseDetailsModel model=new VideoCourseDetailsModel();
                                     model.setCourseName(jsonObject.getString("title"));
                                     model.setCoursePath(response.getString("image_path"));
+                                    model.setCourseFile(jsonObject.getString("path_a"));
+                                    model.setThumbnail(jsonObject.getString("thumbnail"));
                                     videoList.add(model);
                                 }
 

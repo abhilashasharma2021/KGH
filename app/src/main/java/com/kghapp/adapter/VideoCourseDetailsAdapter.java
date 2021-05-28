@@ -55,10 +55,23 @@ public class VideoCourseDetailsAdapter extends RecyclerView.Adapter<VideoCourseD
 
 
             Log.e("VedioAdapter", "onBindViewHolder: " +modelObject.getCoursePath() + modelObject.getThumbnail());
-            Bitmap thumbnail = ThumbnailUtils.createVideoThumbnail(modelObject.getCoursePath() + modelObject.getThumbnail(), MediaStore.Video.Thumbnails.FULL_SCREEN_KIND);
+
+
+
+            try {
+                Glide.with(mContext).load(modelObject.getCoursePath() + modelObject.getThumbnail())
+                        .override(250, 250)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .into(holder.rowVideoCourseDetailsLayoutBinding.ivVideo);
+            } catch (Exception e) {
+
+            }
+
+
+           /* Bitmap thumbnail = ThumbnailUtils.createVideoThumbnail(modelObject.getCoursePath() + modelObject.getThumbnail(), MediaStore.Video.Thumbnails.FULL_SCREEN_KIND);
             holder.rowVideoCourseDetailsLayoutBinding.ivVideo.setImageBitmap(thumbnail);
-
-
+*/
+            Log.e("VedioAdapter", "onBindViewHolder: " +modelObject.getCoursePath() + modelObject.getCourseFile());
             holder.rowVideoCourseDetailsLayoutBinding.rlContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

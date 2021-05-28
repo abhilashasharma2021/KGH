@@ -28,7 +28,6 @@ FragmentQuesExamBinding binding;
     private  View view;
     private Context context;
     long remainingtime;
-
     long totalTimer=120000;
     CountDown timer;
     String RemainTime="";

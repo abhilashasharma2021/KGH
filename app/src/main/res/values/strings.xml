@@ -81,5 +81,14 @@
     <string name="uploaded">Uploaded :</string>
     <string name="share">Share</string>
     <string name="download">Download</string>
+    <string name="select_the_exam_type">Select the exam type</string>
+    <string name="online_exam">Online Exam</string>
+    <string name="select_course">Select Course</string>
+    <string name="select_subject">Select Subject</string>
+    <string name="select_topic">Select Topic</string>
+    <string name="select_exam">Select Exam</string>
+    <string name="thank_you">Thank You</string>
+    <string name="view_classes">View Classes</string>
+    <string name="thank_you_for_your_purchase">Thank You ! for your purchase</string>
 
 </resources>

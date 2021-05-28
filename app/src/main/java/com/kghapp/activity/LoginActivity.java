@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
@@ -29,18 +30,20 @@ import static com.kghapp.others.Api.signup;
 
 public class LoginActivity extends AppCompatActivity {
 ActivityLoginBinding binding;
-String stEmail="",stPassword="";
+String stEmail="",stPassword="",getUserPassword="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding= ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+          getUserPassword = SharedHelper.getKey(getApplicationContext(), AppConstats.USERPASSWORD);
           String text = "<font color=#000>Forgot Password ?</font> <font color=#FF9801>Click here</font>";
             binding.txtforgotPass.setText(Html.fromHtml(text));
 
       /*  String textNew = "<font color=#000>New User?</font> <font color=#FF9801>Register here</font>";
         binding.txtNew.setText(Html.fromHtml(textNew));*/
+
+
 
 
         binding.txtNew.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +58,29 @@ String stEmail="",stPassword="";
                 startActivity(new Intent(LoginActivity.this, ForgotPassActivity.class));
             }
         });
+
+        if (getUserPassword.equals("")){
+          binding.etPassword.setHint("Password");
+        }else {
+            binding.cbRember.setChecked(true);
+            binding.etPassword.setText(getUserPassword);
+        }
+
+
+        binding.cbRember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    String getUserPassword=binding.etPassword.getText().toString().trim();
+                    binding.etPassword.setText(getUserPassword);
+                    SharedHelper.putKey(LoginActivity.this, AppConstats.USERPASSWORD,binding.etPassword.getText().toString().trim());
+
+
+                }
+            }
+        });
+
+
 
 
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +130,7 @@ String stEmail="",stPassword="";
                                 SharedHelper.putKey(LoginActivity.this, AppConstats.UserEmail, jsonObject.getString("email"));
                                 SharedHelper.putKey(LoginActivity.this, AppConstats.USERID, jsonObject.getString("userid"));
                                 SharedHelper.putKey(LoginActivity.this, AppConstats.USERNAME, jsonObject.getString("name"));
+                              /*  SharedHelper.putKey(LoginActivity.this, AppConstats.USERPASSWORD, jsonObject.getString("password"));*/
                                 SharedHelper.putKey(LoginActivity.this, AppConstats.UserMobile, jsonObject.getString("mobile"));
 
 

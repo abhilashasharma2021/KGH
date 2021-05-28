@@ -11,6 +11,7 @@ public class AppConstats {
     public static final String COURSEVIDEOPATH = "COURSEVIDEOPATH";
     public static final String COURSEVIDEOFile = "COURSEVIDEOFile";
     public static final String RemainTime = "RemainTime";
+    public static final String USERPASSWORD = "USERPASSWORD";
 
 
 }

@@ -72,15 +72,11 @@ public class VideoCourseDetailsActivity extends AppCompatActivity {
 
         player = new SimpleExoPlayer.Builder(this).build();
         playerView.setPlayer(player);
-        MediaItem mediaItem = MediaItem.fromUri("https://www.rmp-streaming.com/media/big-buck-bunny-360p.mp4");
+     /*   MediaItem mediaItem = MediaItem.fromUri("https://www.rmp-streaming.com/media/big-buck-bunny-360p.mp4");*/
+        MediaItem mediaItem = MediaItem.fromUri(getPath+getVideoName);
         player.setMediaItem(mediaItem);
         player.setPlayWhenReady(playWhenReady);
         player.seekTo(currentWindow, playbackPosition);
-
-        TrackNameProvider trackNameProvider = new DefaultTrackNameProvider(getResources());
-        TrackSelectionView trackSelectionView = findViewById(R.id.exo_track_selection_view);
-        trackSelectionView.setTrackNameProvider(f -> f.height != Format.NO_VALUE  ? (Math.round(f.frameRate) + " FPS, " + (f.bitrate == Format.NO_VALUE ? "" : (getResources().getString(R.string.exo_track_bitrate, f.bitrate / 1000000f)) ) + ", " + f.height + " P"): trackNameProvider.getTrackName(f));
-
         player.prepare();
 
 
