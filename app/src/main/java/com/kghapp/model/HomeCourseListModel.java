@@ -9,6 +9,26 @@ public class HomeCourseListModel {
     private  String coursePath;
     private  String courseId;
 
+    public String getOffline_cost() {
+        return offline_cost;
+    }
+
+    public void setOffline_cost(String offline_cost) {
+        this.offline_cost = offline_cost;
+    }
+
+    private  String offline_cost;
+
+    public String getCourseType() {
+        return courseType;
+    }
+
+    public void setCourseType(String courseType) {
+        this.courseType = courseType;
+    }
+
+    private  String courseType;
+
     public String getCourseName() {
         return courseName;
     }

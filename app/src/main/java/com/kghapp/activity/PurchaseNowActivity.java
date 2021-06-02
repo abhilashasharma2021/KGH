@@ -23,7 +23,7 @@ ActivityPurchaseBinding binding;
        binding. btnPurchaseNow.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               startActivity(new Intent(PurchaseNowActivity.this, HomeActivity.class));
+               startActivity(new Intent(PurchaseNowActivity.this, PaymentActivity.class));
            }
        });
 

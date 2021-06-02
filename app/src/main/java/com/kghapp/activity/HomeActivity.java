@@ -22,6 +22,7 @@ import com.kghapp.fragment.NotificationFrag;
 import com.kghapp.fragment.ProfileFrag;
 
 import com.kghapp.fragment.QuesExamFrag;
+import com.kghapp.fragment.SelectExamFrag;
 import com.kghapp.others.AppConstats;
 import com.kghapp.others.SharedHelper;
 
@@ -43,7 +44,7 @@ ActivityHomeBinding binding;
 
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment())
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeStartFrag())
                     .commit();
         }
 
@@ -67,13 +68,20 @@ ActivityHomeBinding binding;
 
         switch (item.getItemId()){
             case R.id.action_exam:
-               getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ExamFrag())
+               getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SelectExamFrag())
                         .commit();
              /*   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QuesExamFrag())
                         .commit();*/
 
 
                 break;
+
+            case R.id.action_video:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment())
+                        .commit();
+                break;
+
+
 
             case R.id.action_noti:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NotificationFrag())
@@ -87,7 +95,7 @@ ActivityHomeBinding binding;
                 break;
 
             case R.id.action_home:
-               getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment())
+               getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeStartFrag())
                         .commit();
 
                 break;

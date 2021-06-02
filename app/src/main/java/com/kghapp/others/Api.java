@@ -8,6 +8,11 @@ public class Api {
     public static String CourseList="course_list";
     public static String CourseDetails="course_detail";
     public static String page_content="page_content";
+    public static String exam_list="exam_list";
+    public static String subject_list="subject";
+    public static String topic_list="topic_list";
+    public static String my_purchase_course="my_purchase_course";
+
 
 
 

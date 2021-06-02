@@ -25,7 +25,9 @@ import com.kghapp.adapter.HomeCourseListAdapter;
 import com.kghapp.databinding.FragmentHomeStartBinding;
 import com.kghapp.model.HomeCourseListModel;
 import com.kghapp.others.Api;
+import com.kghapp.others.AppConstats;
 import com.kghapp.others.CustomDialog;
+import com.kghapp.others.SharedHelper;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -43,14 +45,25 @@ public class HomeStartFrag extends Fragment {
     private View view;
 
     private HomeCourseListAdapter adapter;
-    private ArrayList<HomeCourseListModel> courseList=new ArrayList<>();
+    private ArrayList<HomeCourseListModel> courseList = new ArrayList<>();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding= FragmentHomeStartBinding.inflate(getLayoutInflater(),container,false);
-        view=binding.getRoot();
-        context=getActivity();
+        binding = FragmentHomeStartBinding.inflate(getLayoutInflater(), container, false);
+        view = binding.getRoot();
+        context = getActivity();
+
+        String getUserId = SharedHelper.getKey(getActivity(), AppConstats.USERID);
+
+       if (getUserId.equals("")) {
+           binding.llLogin.setVisibility(View.VISIBLE);
+        }
+       else {
+            binding.llLogin.setVisibility(View.GONE);
+        }
+
 
         binding.llLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,12 +75,12 @@ public class HomeStartFrag extends Fragment {
         binding.btnAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity(new Intent(getActivity(), AllCourseShowActivity.class));
+                startActivity(new Intent(getActivity(), AllCourseShowActivity.class));
             }
         });
 
         adapter = new HomeCourseListAdapter(context, courseList);
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(),2,RecyclerView.VERTICAL,false);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 2, RecyclerView.VERTICAL, false);
         binding.rvHomeStart.setLayoutManager(mLayoutManager);
         binding.rvHomeStart.setAdapter(adapter);
 
@@ -78,56 +91,53 @@ public class HomeStartFrag extends Fragment {
     private void getData() {
 
         CustomDialog dialog = new CustomDialog();
-            dialog.showDialog(R.layout.progress_layout, getActivity());
-            AndroidNetworking.post(Api.BASE_URL)
-                    .addBodyParameter("control",CourseList)
-                    .addBodyParameter("limit","10")
-                    .addBodyParameter("page","2")
-                    .setPriority(Priority.HIGH)
-                    .build()
-                    .getAsJSONObject(new JSONObjectRequestListener() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            Log.e("egregh", response.toString());
-                            dialog.hideDialog();
-                            courseList=new ArrayList<>();
-                            try {
-                                if (response.getString("result").equals("true")){
-                                    String image_path=response.getString("image_path");
-                                    String data=response.getString("data");
-                                    JSONArray jsonArray=new JSONArray(data);
-                                    for (int i = 0; i <4 ; i++) {
-                                        JSONObject object=jsonArray.getJSONObject(i);
-                                        HomeCourseListModel model=new HomeCourseListModel();
-                                        model.setCourseId(object.getString("cid"));
-                                        model.setCourseName(object.getString("coursename"));
-                                        model.setCourseMedium(object.getString("medium"));
-                                        model.setCoursePrice(object.getString("coursecost"));
-                                        model.setCourseDuration(object.getString("duration"));
-                                        model.setCourseImage(object.getString("thumbnail"));
-                                        model.setCoursePath(response.getString("image_path"));
-                                        courseList.add(model);
-                                    }
-                                    adapter = new HomeCourseListAdapter(getActivity(), courseList);
-                                    binding.rvHomeStart.setAdapter(adapter);
+        dialog.showDialog(R.layout.progress_layout, getActivity());
+        AndroidNetworking.post(Api.BASE_URL)
+                .addBodyParameter("control", CourseList)
+                .addBodyParameter("limit", "10")
+                .addBodyParameter("page", "2")
+                .setPriority(Priority.HIGH)
+                .build()
+                .getAsJSONObject(new JSONObjectRequestListener() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.e("egregh", response.toString());
+                        dialog.hideDialog();
+                        courseList = new ArrayList<>();
+                        try {
+                            if (response.getString("result").equals("true")) {
+                                String image_path = response.getString("image_path");
+                                String data = response.getString("data");
+                                JSONArray jsonArray = new JSONArray(data);
+                                for (int i = 0; i < 4; i++) {
+                                    JSONObject object = jsonArray.getJSONObject(i);
+                                    HomeCourseListModel model = new HomeCourseListModel();
+                                    model.setCourseId(object.getString("cid"));
+                                    model.setCourseName(object.getString("coursename"));
+                                    model.setCourseMedium(object.getString("medium"));
+                                    model.setCoursePrice(object.getString("coursecost"));
+                                    model.setCourseDuration(object.getString("duration"));
+                                    model.setCourseImage(object.getString("thumbnail"));
+                                    model.setCoursePath(response.getString("image_path"));
+                                    courseList.add(model);
                                 }
+                                adapter = new HomeCourseListAdapter(getActivity(), courseList);
+                                binding.rvHomeStart.setAdapter(adapter);
                             }
-
-
-                            catch (Exception e){
-                                dialog.hideDialog();
-                                Log.e("AllCourseShowActivity", "e: " +e);
-                            }
-                        }
-
-                        @Override
-                        public void onError(ANError anError) {
+                        } catch (Exception e) {
                             dialog.hideDialog();
-                            Log.e("AllCourseShowActivity", "anError: " +anError);
+                            Log.e("AllCourseShowActivity", "e: " + e);
                         }
-                    });
+                    }
 
-        }
-
+                    @Override
+                    public void onError(ANError anError) {
+                        dialog.hideDialog();
+                        Log.e("AllCourseShowActivity", "anError: " + anError);
+                    }
+                });
 
     }
+
+
+}

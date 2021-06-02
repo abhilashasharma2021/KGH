@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KghApp">
-        <activity android:name=".activity.PurchaseNowActivity"></activity>
+        <activity android:name=".activity.ThankYouActivity" />
+        <activity android:name=".activity.PaymentActivity" />
+        <activity android:name=".activity.PurchaseNowActivity" />
         <activity android:name=".activity.VideoCourseDetailsActivity" />
         <activity
             android:name=".activity.PurchasedCourseDetailsActivity"
@@ -26,7 +28,7 @@
         <activity
             android:name=".activity.CourseDetailsActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
             android:name=".activity.IntroductionActivity"
             android:configChanges="orientation|screenSize"
@@ -47,6 +49,8 @@
             android:name=".activity.SplashActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,8 +61,9 @@
         <activity
             android:name=".activity.HomeActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
-          <!--  <intent-filter>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

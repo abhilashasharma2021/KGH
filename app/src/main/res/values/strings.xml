@@ -7,7 +7,7 @@
     <string name="re_enter_password">Re enter Password</string>
     <string name="forgot_password">Forgot password ?</string>
     <string name="forgot_passsword">Forgot password </string>
-    <string name="full_name">Full Name</string>
+    <string name="full_name">Full Name :</string>
     <string name="about">About</string>
     <string name="qualification">Qualification :</string>
     <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
@@ -70,7 +70,6 @@
     <string name="course_progress">Course Progress</string>
     <string name="logout">Logout</string>
     <string name="next">Next</string>
-    <string name="purchase_now">Purchase Now</string>
     <string name="exam">Exam</string>
     <string name="submit_amp_exam"><![CDATA[Submit & Exam]]></string>
     <string name="clear_answer">Clear answer</string>
@@ -90,5 +89,13 @@
     <string name="thank_you">Thank You</string>
     <string name="view_classes">View Classes</string>
     <string name="thank_you_for_your_purchase">Thank You ! for your purchase</string>
+    <string name="purchase_now">Purchase Now</string>
+    <string name="email">Email :</string>
+    <string name="mobile">Mobile :</string>
+    <string name="amount">Amount</string>
+    <string name="course_name">Course Name</string>
+    <string name="transaction_cahrges">Transaction Cahrges</string>
+    <string name="total_price">Total Price</string>
+    <string name="complete_purchase">Complete Purchase</string>
 
 </resources>

@@ -1,12 +1,16 @@
 package com.kghapp.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.kghapp.R;
 import com.kghapp.databinding.RowhomestartlayoutBinding;
 import com.kghapp.databinding.RowpurchaselayoutBinding;
 import com.kghapp.model.HomeCourseListModel;
@@ -33,11 +37,53 @@ public class PurchaseHistoryAdapter extends RecyclerView.Adapter<PurchaseHistory
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         HomeCourseListModel modelObject = homestartList.get(position);
-        holder.rowpurchaselayoutBinding.txMedium.setText(modelObject.getCourseMedium());
-        holder.rowpurchaselayoutBinding.txCourseName.setText(modelObject.getCourseName());
-        holder.rowpurchaselayoutBinding.txDuration.setText(modelObject.getCourseDuration());
-        holder.rowpurchaselayoutBinding.txPrice.setText(modelObject.getCoursePrice());
-      /*  holder.rowpurchaselayoutBinding.ivCourse.setImageResource(modelObject.getCourseImage());*/
+
+        if (modelObject !=null){
+            holder.rowpurchaselayoutBinding.txMedium.setText(modelObject.getCourseMedium());
+            holder.rowpurchaselayoutBinding.txCourseName.setText(modelObject.getCourseName());
+
+
+            String duration_new=modelObject.getCourseDuration();
+            int duration = Integer.parseInt(duration_new);
+
+            if(duration<30){
+                holder.rowpurchaselayoutBinding.txDuration.setText(modelObject.getCourseDuration() + "Days");
+            }
+            else  {
+                int month=duration/30;
+                String durations=String.valueOf(month);
+                Log.e("HomeCourseListAdapter", "onBindViewHolder: " +month);
+                holder.rowpurchaselayoutBinding.txDuration.setText(durations +"Months");
+            }
+
+
+
+            /*course type me 0 online h 1 offline h*/
+            String courseType=modelObject.getCourseType();
+            if (courseType.equals("0")){
+                holder.rowpurchaselayoutBinding.txPrice.setText("₹"+ modelObject.getCoursePrice());
+
+            }
+            else {
+                holder.rowpurchaselayoutBinding.txPrice.setText("₹"+ modelObject.getOffline_cost());
+            }
+
+
+            Log.e("PurchaseHistoryAdapter", "onBindViewHolder: " +modelObject.getCoursePath() + modelObject.getCourseImage());
+            try {
+                Glide.with(mContext).load(modelObject.getCoursePath() + modelObject.getCourseImage())
+                        .placeholder(R.drawable.dummy).override(250, 250)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .into(holder.rowpurchaselayoutBinding.ivCourse);
+            } catch (Exception e) {
+
+            }
+
+
+        }
+
+
+
     }
 
     @Override
