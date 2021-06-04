@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardElevation="6dp"
+        android:id="@+id/card"
+        app:cardCornerRadius="12sp"
+        android:layout_margin="10dp"
+        android:layout_height="150dp"
+        android:elevation="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/ivCourse"
+                    android:src="@drawable/techer_dummy"
+                    android:layout_height="100dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txCourseName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_dur2"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:gravity="start"
+                        android:text="A P P S C- General  studies for all  Competitive Exams"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="20dp"
+                        android:text="Telugu Medium"
+                        android:textSize="12dp"
+                        android:id="@+id/txMedium"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/sky_blue_rounded"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/teal_800"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

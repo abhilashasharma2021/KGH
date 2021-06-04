@@ -22,8 +22,10 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.bumptech.glide.Glide;
 import com.kghapp.R;
 import com.kghapp.activity.HomeActivity;
+import com.kghapp.activity.LoginActivity;
 import com.kghapp.activity.SplashActivity;
 import com.kghapp.adapter.HomeCourseListAdapter;
 import com.kghapp.adapter.PurchaseHistoryAdapter;
@@ -32,6 +34,7 @@ import com.kghapp.databinding.FragmentProfileBinding;
 import com.kghapp.model.HomeCourseListModel;
 import com.kghapp.others.Api;
 import com.kghapp.others.AppConstats;
+import com.kghapp.others.CustomDialog;
 import com.kghapp.others.SharedHelper;
 
 import org.json.JSONArray;
@@ -41,6 +44,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import static com.kghapp.others.Api.my_purchase_course;
+import static com.kghapp.others.Api.show_profile;
 
 
 public class ProfileFrag extends Fragment {
@@ -80,12 +84,14 @@ public class ProfileFrag extends Fragment {
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(),2,RecyclerView.VERTICAL,false);
         binding.rvHistory.setLayoutManager(mLayoutManager);
 
-
+        show_Profile();
         getHistory();
         return view;
     }
     private void getHistory() {
       String  userId = SharedHelper.getKey(getActivity(), AppConstats.USERID);
+
+
 
         Log.e("ProfileFrag", "userId: " +userId);
         AndroidNetworking.post(Api.BASE_URL)
@@ -98,6 +104,7 @@ public class ProfileFrag extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.e("ProfileFrag", "onResponse: " +response);
+
                         courseList=new ArrayList<>();
                         try {
                             if (response.getString("result").equals("true")){
@@ -130,6 +137,7 @@ public class ProfileFrag extends Fragment {
                             }
                         } catch (JSONException e) {
                             Log.e("ProfileFrag", "onResponse: " +e);
+
                         }
                     }
 
@@ -173,4 +181,74 @@ public class ProfileFrag extends Fragment {
         dialog.show();
 
     }
+
+
+    private void show_Profile(){
+
+        String  userId = SharedHelper.getKey(getActivity(), AppConstats.USERID);
+
+        CustomDialog dialog = new CustomDialog();
+        dialog.showDialog(R.layout.progress_layout, getActivity());
+
+        AndroidNetworking.post(Api.BASE_URL)
+                .addBodyParameter("control", show_profile)
+                .addBodyParameter("userid", userId)
+                .setTag("SHOW profile successfully")
+                .setPriority(Priority.HIGH)
+                .build()
+                .getAsJSONObject(new JSONObjectRequestListener() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.e("rtgytfh", response.toString());
+                        dialog.hideDialog();
+
+                        try {
+                            if (response.getString("result").equals("true")) {
+
+                                JSONObject jsonObject=new JSONObject(response.getString("data"));
+
+                                String userID = jsonObject.getString("userid");
+                                String email = jsonObject.getString("email");
+                                String username = jsonObject.getString("name");
+                                String mobile = jsonObject.getString("mobile");
+                                String gender = jsonObject.getString("gender");
+                                String profile_image = jsonObject.getString("image");
+                                String path = jsonObject.getString("path");
+
+
+                                Log.e("ProfileActivity", "image: " + path + profile_image);
+
+
+                                binding.etName.setText(username);
+                                binding.etMobile.setText(mobile);
+                                binding.txEmail.setText(email);
+                                binding.txUserId.setText("KGH"+userID);
+
+
+                                if (!profile_image.equals("")) {
+                                    try {
+
+                                        Glide.with(getActivity()).load(path + profile_image).error(R.drawable.techer_dummy).into(binding.ivUser);
+                                    } catch (Exception e) {
+                                    }
+                                }
+
+                            }
+                        } catch (JSONException e) {
+                            Log.e("rtyrtyhtr", e.getMessage());
+                            dialog.hideDialog();
+                        }
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+                        Log.e("regrtht", anError.getMessage());
+                        dialog.hideDialog();
+
+                    }
+                });
+
+
+    }
+
     }

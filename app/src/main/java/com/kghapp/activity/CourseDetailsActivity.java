@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -39,6 +41,7 @@ public class CourseDetailsActivity extends AppCompatActivity {
     ActivityCourseDetailsBinding binding;
     ArrayList<VideoCourseDetailsModel>videoList;
     ArrayList<TeacherProCourseDetailsModel>teacherList;
+    String  userId="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,10 +53,34 @@ public class CourseDetailsActivity extends AppCompatActivity {
         RecyclerView.LayoutManager mLayoutManager1 = new LinearLayoutManager(CourseDetailsActivity.this,RecyclerView.VERTICAL,false);
         binding.rvProfile.setLayoutManager(mLayoutManager1);
 
+          userId = SharedHelper.getKey(CourseDetailsActivity.this, AppConstats.USERID);
+
         binding.llPurchaseNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            startActivity(new Intent(CourseDetailsActivity.this, PurchaseNowActivity.class));
+
+                if (userId.equals("")){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(CourseDetailsActivity.this);
+                    builder.setMessage("Please Login...")
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+
+                                    startActivity(new Intent(CourseDetailsActivity.this, LoginActivity.class));
+                                }
+                            })
+                            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    // User cancelled the dialog
+                                }
+                            });
+
+                    builder.show();
+
+                }else {
+                    startActivity(new Intent(CourseDetailsActivity.this, PurchaseNowActivity.class));
+                }
+
+
             }
         });
         courseDetails();

@@ -106,16 +106,18 @@
                     android:layout_height="200dp"
                     android:orientation="horizontal">
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
                         android:padding="10dp"
+                        android:id="@+id/ivUser"
                         android:src="@drawable/techer_dummy"
-                        android:layout_height="100dp"/>
+                        android:layout_height="120dp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:orientation="vertical">
 
                         <RelativeLayout
@@ -143,12 +145,14 @@
                                 android:layout_marginLeft="5dp"
                                 android:layout_gravity="start"
                                 android:textColor="@color/black"/>
-                            <TextView
+                            <EditText
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="12dp"
+                                android:textSize="14sp"
+                                android:background="@null"
                                 android:layout_toRightOf="@+id/ivStudent"
                                 android:textStyle="bold"
+                                android:id="@+id/etName"
                                 android:layout_below="@+id/tx"
                                 android:layout_marginLeft="5dp"
                                 android:gravity="start"
@@ -166,6 +170,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="5dp"
         android:text="@string/change"
+        android:visibility="gone"
         android:textAllCaps="false"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/poppinseemibold"
@@ -211,6 +216,7 @@
                                 android:textSize="12dp"
                                 android:layout_toRightOf="@+id/iv1"
                                 android:textStyle="bold"
+                                android:id="@+id/txUserId"
                                 android:layout_below="@+id/txId"
                                 android:layout_marginLeft="5dp"
                                 android:gravity="start"
@@ -245,12 +251,14 @@
                                 android:layout_marginLeft="5dp"
                                 android:layout_gravity="start"
                                 android:textColor="@color/black"/>
-                            <TextView
+                            <EditText
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="12dp"
                                 android:layout_toRightOf="@+id/iv2"
                                 android:textStyle="bold"
+                                android:id="@+id/etGender"
+                                android:background="@null"
                                 android:layout_below="@+id/txGender"
                                 android:layout_marginLeft="10dp"
                                 android:gravity="start"
@@ -311,8 +319,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
+                    android:textSize="14sp"
                     android:textStyle="bold"
+                    android:id="@+id/txEmail"
                     android:layout_below="@+id/txEmail1"
                     android:layout_marginLeft="5dp"
                     android:gravity="start"
@@ -349,13 +358,15 @@
                     android:layout_gravity="start"
                     android:textColor="@color/black"/>
 
-                <TextView
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txMobile1"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="1dp"
                     android:gravity="start"
+                    android:id="@+id/etMobile"
+                    android:background="@null"
                     android:text="91-0123456789"
                     android:textColor="@color/grey"
                     android:textSize="13dp"
@@ -366,6 +377,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:visibility="gone"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:layout_width="25dp"
