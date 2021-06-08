@@ -64,12 +64,16 @@ dependencies {
 
 
     /*video Player*/
-    implementation 'com.google.android.exoplayer:exoplayer-core:2.12.0'
-    implementation 'com.google.android.exoplayer:exoplayer-dash:2.12.0'
-    implementation 'com.google.android.exoplayer:exoplayer-ui:2.12.0'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.14.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.14.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.14.0'
 
 
     //dexter
-    implementation 'com.karumi:dexter:6.0.2'
+    implementation 'com.karumi:dexter:6.2.2'
+
+    //Toasty
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+    implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
 
 }

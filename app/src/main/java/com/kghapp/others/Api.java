@@ -13,6 +13,8 @@ public class Api {
     public static String topic_list="topic_list";
     public static String my_purchase_course="my_purchase_course";
     public static String show_profile="show_profile";
+    public static String forget_password="forget_password";
+    public static String change_password="change_password";
 
 
 

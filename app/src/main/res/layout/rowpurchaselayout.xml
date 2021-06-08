@@ -6,7 +6,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="320dp"
         android:layout_margin="10dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="10dp">
@@ -79,12 +79,12 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="25dp"
+                                android:layout_width="23dp"
                                 android:src="@drawable/duration"
                                 android:layout_marginLeft="5dp"
                                 android:padding="3dp"
                                 android:id="@+id/ivDuration"
-                                android:layout_height="25dp" />
+                                android:layout_height="23dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -112,6 +112,7 @@
 
                     <View
                         android:layout_width="1dp"
+                        android:layout_marginLeft="3dp"
                         android:layout_height="match_parent"
                         android:background="#dbdbdb" />
 

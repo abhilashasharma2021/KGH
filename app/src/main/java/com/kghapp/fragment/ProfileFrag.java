@@ -24,6 +24,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.bumptech.glide.Glide;
 import com.kghapp.R;
+import com.kghapp.activity.ChangePasswordActivity;
 import com.kghapp.activity.HomeActivity;
 import com.kghapp.activity.LoginActivity;
 import com.kghapp.activity.SplashActivity;
@@ -79,7 +80,13 @@ public class ProfileFrag extends Fragment {
         String textNew = "<font color=#BED3CBCB>Do you want to ?</font> <font color=#FF9801>Change Password</font>";
         binding.txtChange.setText(Html.fromHtml(textNew));
 
+        binding.txtChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                startActivity(new Intent(getActivity(), ChangePasswordActivity.class));
+            }
+        });
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(),2,RecyclerView.VERTICAL,false);
         binding.rvHistory.setLayoutManager(mLayoutManager);
