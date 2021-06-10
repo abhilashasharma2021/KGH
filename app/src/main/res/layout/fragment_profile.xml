@@ -418,21 +418,22 @@
 
 
         </LinearLayout>
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnprofile"
-            android:layout_width="250dp"
-            android:layout_gravity="center"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/edit_profile"
-            android:textAllCaps="false"
-            android:fontFamily="@font/poppinseemibold"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
 
-        <TextView
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnprofile"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/poppinseemibold"
+                    android:text="@string/edit_profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
             android:id="@+id/txtChange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

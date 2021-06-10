@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
@@ -27,6 +28,8 @@ String userId="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+      /*  getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,WindowManager.LayoutParams.FLAG_SECURE);*/
         setContentView(R.layout.activity_splash);
       /*  final Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(new Runnable() {

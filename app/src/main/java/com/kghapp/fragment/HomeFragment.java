@@ -80,8 +80,8 @@ public class HomeFragment extends Fragment {
         Log.e("dfgfdfb", "userId: " +userId);
         AndroidNetworking.post(Api.BASE_URL)
                 .addBodyParameter("control",my_purchase_course)
-              //  .addBodyParameter("userid","10137")
-                .addBodyParameter("userid",userId)
+               .addBodyParameter("userid","10137")
+               // .addBodyParameter("userid",userId)
                 .setTag("Show Purchased Course")
                 .setPriority(Priority.HIGH)
                 .build()
