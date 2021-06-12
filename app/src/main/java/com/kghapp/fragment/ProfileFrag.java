@@ -266,7 +266,7 @@ public class ProfileFrag extends Fragment {
                                 String path = jsonObject.getString("path");
 
 
-                                Log.e("ProfileActivity", "image: " + path + profile_image);
+                                Log.e("dfhhjhgfjhg", "image: " + path + profile_image);
 
 
                                 binding.etName.setText(username);
@@ -274,8 +274,13 @@ public class ProfileFrag extends Fragment {
                                 binding.txEmail.setText(email);
                                 binding.txUserId.setText("KGH" + userID);
 
-                                if (!gender.equals("")){
-                                    binding.etGender.setText(gender);
+                                if (gender.equals("0")){
+                                    binding.etGender.setText("Male");
+                                }else if (gender.equals("1")){
+                                    binding.etGender.setText("Female");
+                                }
+                                else {
+                                    binding.etGender.setText("Gender");
                                 }
 
 
@@ -387,7 +392,18 @@ public class ProfileFrag extends Fragment {
 
                                 etName.setText(username);
                                 etMobile.setText(mobile);
-                                etGender.setText(gender);
+                                if (jsonObject.getString("gender").equals("0")){
+                                    etGender.setText("Male");
+                                }
+                                else if (jsonObject.getString("gender").equals("1")){
+                                    etGender.setText("Female");
+                                }
+                                else {
+                                    etGender.setText("Gender");
+                                }
+
+
+
 
 
                                 if (!profile_image.equals("")) {
@@ -535,7 +551,7 @@ public class ProfileFrag extends Fragment {
                 .addMultipartParameter("full_name",strUserName)
                 .addMultipartParameter("mobile",str_contact)
                 .addMultipartParameter("gender",str_gender)
-               /* .addMultipartFile("image",f)*/
+               .addMultipartFile("image",f)
                 .setPriority(Priority.HIGH)
                 .setTag("Sussessful")
                 .build()
@@ -554,7 +570,17 @@ public class ProfileFrag extends Fragment {
 
                                     etName.setText(jsonObject.getString("name"));
                                     etMobile.setText(jsonObject.getString("mobile"));
-                                    etGender.setText(jsonObject.getString("gender"));
+
+                                    if (jsonObject.getString("gender").equals("0")){
+                                        etGender.setText("Male");
+                                    }
+                                    else if (jsonObject.getString("gender").equals("1")){
+                                        etGender.setText("Female");
+                                    }
+                                    else {
+                                        etGender.setText("Gender");
+                                    }
+
 
 
                                     if (!jsonObject.getString("").equals("")) {
