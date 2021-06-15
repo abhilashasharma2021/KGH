@@ -109,7 +109,7 @@ public class AllPurchaseHistoryActivity extends AppCompatActivity {
                     @Override
                     public void onError(ANError anError) {
 
-                        Log.e("dhfghythythythtfgj", "onError: " + anError);
+                        Log.e("fgregregvre", "onError: " + anError);
                         dialog.hideDialog();
 
                     }
