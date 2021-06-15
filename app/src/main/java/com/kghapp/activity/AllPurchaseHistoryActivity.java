@@ -49,8 +49,6 @@ public class AllPurchaseHistoryActivity extends AppCompatActivity {
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(AllPurchaseHistoryActivity.this, 2, RecyclerView.VERTICAL, false);
         binding.rvPurchase.setLayoutManager(mLayoutManager);
-
-
         getHistory();
     }
 
@@ -103,7 +101,7 @@ public class AllPurchaseHistoryActivity extends AppCompatActivity {
 
                             }
                         } catch (JSONException e) {
-                            Log.e("dhfghtfgj", "onResponse: " + e);
+                            Log.e("tghtryhrt", "onResponse: " + e);
                             dialog.hideDialog();
                         }
                     }
@@ -111,7 +109,7 @@ public class AllPurchaseHistoryActivity extends AppCompatActivity {
                     @Override
                     public void onError(ANError anError) {
 
-                        Log.e("dhfghtfgj", "onError: " + anError);
+                        Log.e("dhfghythythythtfgj", "onError: " + anError);
                         dialog.hideDialog();
 
                     }
