@@ -16,6 +16,7 @@ public class Api {
     public static String forget_password="forget_password";
     public static String change_password="change_password";
     public static String update_profile="update_profile";
+    public static String startExam="start_exam";
 
 
 

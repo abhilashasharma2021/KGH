@@ -55,34 +55,7 @@ public class CourseDetailsActivity extends AppCompatActivity {
 
           userId = SharedHelper.getKey(CourseDetailsActivity.this, AppConstats.USERID);
 
-        binding.llPurchaseNow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                if (userId.equals("")){
-                    AlertDialog.Builder builder = new AlertDialog.Builder(CourseDetailsActivity.this);
-                    builder.setMessage("Please Login...")
-                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-
-                                    startActivity(new Intent(CourseDetailsActivity.this, LoginActivity.class));
-                                }
-                            })
-                            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    // User cancelled the dialog
-                                }
-                            });
-
-                    builder.show();
-
-                }else {
-                    startActivity(new Intent(CourseDetailsActivity.this, PurchaseNowActivity.class));
-                }
-
-
-            }
-        });
         courseDetails();
         teacher_Profile();
     }
@@ -93,7 +66,7 @@ public class CourseDetailsActivity extends AppCompatActivity {
         dialog.showDialog(R.layout.progress_layout, CourseDetailsActivity.this);
         AndroidNetworking.post(Api.BASE_URL)
                 .addBodyParameter("control",CourseDetails)
-                .addBodyParameter("id","32")
+                .addBodyParameter("id",courseId)
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -130,6 +103,47 @@ public class CourseDetailsActivity extends AppCompatActivity {
                                     binding.txCourseName.setText(object.getString("coursename"));
                                     binding.txMedium.setText(object.getString("medium"));
                                     binding.txCoursePrice.setText("₹" + object.getString("coursecost"));
+
+
+                                binding.llPurchaseNow.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+
+                                        if (userId.equals("")){
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(CourseDetailsActivity.this);
+                                            builder.setMessage("Please Login...")
+                                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                                        public void onClick(DialogInterface dialog, int id) {
+
+                                                            startActivity(new Intent(CourseDetailsActivity.this, LoginActivity.class));
+                                                        }
+                                                    })
+                                                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                                        public void onClick(DialogInterface dialog, int id) {
+                                                            // User cancelled the dialog
+                                                        }
+                                                    });
+
+                                            builder.show();
+
+                                        }else {
+
+                                            try {
+                                                SharedHelper.putKey(getApplicationContext(), AppConstats.PuchasedCourseName, object.getString("coursename"));
+                                                SharedHelper.putKey(getApplicationContext(), AppConstats.PuchasedCourseMedium, object.getString("medium"));
+                                                SharedHelper.putKey(getApplicationContext(), AppConstats.PuchasedCourseOfflineCost, "₹" + object.getString("coursecost"));
+                                                SharedHelper.putKey(getApplicationContext(), AppConstats.PuchasedCourseOnlineCost, "₹" + object.getString("offline_cost"));
+
+                                            } catch (JSONException e) {
+                                                e.printStackTrace();
+                                            }
+
+                                            startActivity(new Intent(CourseDetailsActivity.this, PurchaseNowActivity.class));
+                                        }
+
+
+                                    }
+                                });
 
 
                                     try {

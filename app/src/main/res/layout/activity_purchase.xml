@@ -61,11 +61,11 @@
                         android:layout_height="wrap_content"
                         android:text="A P P S C- Group II"
                         android:textSize="12dp"
+                        android:id="@+id/txCourseName"
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="30dp"
                         android:gravity="center_horizontal"
                         android:fontFamily="@font/poppinsbold"
-                        android:layout_below="@+id/ll_dur2"
                         android:layout_marginLeft="10dp"
                         android:layout_gravity="start"
                         android:textColor="@color/black"/>

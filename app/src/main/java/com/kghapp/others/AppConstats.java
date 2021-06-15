@@ -12,6 +12,10 @@ public class AppConstats {
     public static final String COURSEVIDEOFile = "COURSEVIDEOFile";
     public static final String RemainTime = "RemainTime";
     public static final String USERPASSWORD = "USERPASSWORD";
+    public static final String PuchasedCourseName = "PuchasedCourseName";
+    public static final String PuchasedCourseMedium = "PuchasedCourseMedium";
+    public static final String PuchasedCourseOfflineCost = "PuchasedCourseOfflineCost";
+    public static final String PuchasedCourseOnlineCost = "PuchasedCourseOnlineCost";
 
 
 }
