@@ -19,8 +19,11 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.kghapp.R;
+import com.kghapp.activity.AllPurchaseHistoryActivity;
 import com.kghapp.databinding.FragmentSelectExamBinding;
 import com.kghapp.others.Api;
+import com.kghapp.others.AppConstats;
+import com.kghapp.others.SharedHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,6 +33,7 @@ import java.util.ArrayList;
 
 import static com.kghapp.others.Api.CourseList;
 import static com.kghapp.others.Api.exam_list;
+import static com.kghapp.others.Api.my_purchase_course;
 import static com.kghapp.others.Api.subject_list;
 import static com.kghapp.others.Api.topic_list;
 
@@ -115,6 +119,8 @@ public class SelectExamFrag extends Fragment {
                 else {
 
                     stSubjectId = arrayListSubjId.get(position);
+
+                    Log.e("SelectExamFrag", "onItemSelected: " +stSubjectId);
                     selectTopic(stSubjectId);
                 }
 
@@ -168,16 +174,16 @@ public class SelectExamFrag extends Fragment {
     }
 
     private void selectCourse(){
-
+        String userId = SharedHelper.getKey(getActivity(), AppConstats.USERID);
         AndroidNetworking.post(Api.BASE_URL)
-                .addBodyParameter("control",CourseList)
-                .addBodyParameter("limit","100")
+                .addBodyParameter("control",my_purchase_course)
+                .addBodyParameter("userid","10137")
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.e("SelectExamFrag", "onResponse: " +response);
+                        Log.e("gjnfgmjhgmk", "onResponse: " +response);
                         arrayListCourse = new ArrayList<>();
                         arrayListCourseId = new ArrayList<>();
                         try {
@@ -190,8 +196,10 @@ public class SelectExamFrag extends Fragment {
 
                                     JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                                    String cid = jsonObject.getString("cid");
-                                    String coursename = jsonObject.getString("coursename");
+                                    String course_details = jsonObject.getString("course_details");
+                                    JSONObject object=new JSONObject(course_details);
+                                    String cid = object.getString("cid");
+                                    String coursename = object.getString("coursename");
 
                                     arrayListCourseId.add(cid);
                                     Log.e("fdbhfdnb", cid);
@@ -206,14 +214,14 @@ public class SelectExamFrag extends Fragment {
                             binding.spCourse.setAdapter(adapterCourse);
 
                         } catch (JSONException e) {
-                            Log.e("SelectExamFrag", "onResponse: " +e);
+                            Log.e("erwth", "onResponse: " +e);
                         }
 
                     }
 
                     @Override
                     public void onError(ANError anError) {
-                        Log.e("SelectExamFrag", "onResponse: " +anError);
+                        Log.e("rgthjhn", "onResponse: " +anError);
                     }
                 });
 
@@ -246,12 +254,20 @@ public class SelectExamFrag extends Fragment {
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                                    String sid = jsonObject.getString("sid");
-                                    String subject_name = jsonObject.getString("subject");
+                                    String detail = jsonObject.getString("detail");
+                                    JSONArray array=new JSONArray(detail);
+                                    for (int j = 0; j <array.length() ; j++) {
+                                        JSONObject object=array.getJSONObject(j);
+                                        String sid = object.getString("sid");
+                                        String subject_name = object.getString("subject");
 
-                                    arrayListSubjId.add(sid);
-                                    Log.e("dsgvdfgbv", sid);
-                                    arrayListSubj.add(subject_name);
+                                        arrayListSubjId.add(sid);
+                                        Log.e("dsgvdfgbv", sid);
+                                        arrayListSubj.add(subject_name);
+
+
+                                    }
+
 
 
                                 }
@@ -303,7 +319,7 @@ public class SelectExamFrag extends Fragment {
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                                    String tid = jsonObject.getString("tid");
+                                    String tid = jsonObject.getString("umid");
                                     String title = jsonObject.getString("title");
 
                                     arrayListTopicId.add(tid);
